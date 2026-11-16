@@ -1,0 +1,95 @@
+{
+  "schema": "vera-anchor-hf-v1-conformance@1",
+  "reference": {
+    "repository": "VeraAnchor/vera-anchor-verifier",
+    "commit": "53937fb2177c7340ab0b8e432aea5241fe76231b",
+    "source": "src/hf/hashContractV1.ts",
+    "runtime": "Node.js 22.16.0"
+  },
+  "vectors": [
+    {
+      "id": "raw-abc",
+      "domain": "dataset.content",
+      "material": "raw",
+      "input_hex": "616263",
+      "payload_hex": "616263",
+      "frame_hex": "68663a6672616d653a763100000f646174617365742e636f6e74656e7400000003616263",
+      "digest": "d1d14af0347a0c676f07c7f39f0e26ae5e2218343a3a0937abdf8b43c60c69fc856cdc6bd3c50faf2d8bb6d5cd114df4a618fcbfe2ba38be7ce811df301a82e4"
+    },
+    {
+      "id": "utf8-hello",
+      "domain": "dataset.content",
+      "material": "utf8",
+      "text": "h\u00e9llo",
+      "payload_hex": "68c3a96c6c6f",
+      "frame_hex": "68663a6672616d653a763100000f646174617365742e636f6e74656e740000000668c3a96c6c6f",
+      "digest": "82f7be8ad0c60f6a49c6b616cec09029c85a5ade0af5b3d3347b84e1dd30cd6594d2b9fefd29506bb37925b7ce3a4b47a03bed3c85180b3de1ce41eab3dcbd28"
+    },
+    {
+      "id": "json-basic",
+      "domain": "dataset.metadata",
+      "material": "json",
+      "value": {
+        "z": 1,
+        "a": true,
+        "n": null,
+        "s": "x"
+      },
+      "payload_hex": "7b2261223a747275652c226e223a6e756c6c2c2273223a2278222c227a223a317d",
+      "frame_hex": "68663a6672616d653a7631000010646174617365742e6d65746164617461000000217b2261223a747275652c226e223a6e756c6c2c2273223a2278222c227a223a317d",
+      "digest": "aff30b4dc7dc07f7f476e792288ce05a77031938065869a684f831283e25f01e3296ed2dee2250331dde9a38029c2e1be17f3672fd78e2917c016be4ba244d76"
+    },
+    {
+      "id": "json-numbers",
+      "domain": "dataset.metadata",
+      "material": "json",
+      "value": {
+        "small": 1e-7,
+        "threshold": 1e-6,
+        "large": 1e21,
+        "plain": 1e20,
+        "negzero": -0.0
+      },
+      "payload_hex": "7b226c61726765223a31652b32312c226e65677a65726f223a302c22706c61696e223a3130303030303030303030303030303030303030302c22736d616c6c223a31652d372c227468726573686f6c64223a302e3030303030317d",
+      "frame_hex": "68663a6672616d653a7631000010646174617365742e6d657461646174610000005b7b226c61726765223a31652b32312c226e65677a65726f223a302c22706c61696e223a3130303030303030303030303030303030303030302c22736d616c6c223a31652d372c227468726573686f6c64223a302e3030303030317d",
+      "digest": "7e854d6427196b9ebe75596b6f32b9e1d86b3fdb67bfdd639dfb2d7877b1299954db45f3d581d1564c1878a3eeb6439061639f8a25f0538713f4a15699d76d23"
+    },
+    {
+      "id": "json-utf16-keys",
+      "domain": "dataset.metadata",
+      "material": "json",
+      "value": {
+        "\ue000": "bmp",
+        "\ud83d\ude00": "astral",
+        "a": "ascii"
+      },
+      "payload_hex": "7b2261223a226173636969222c22f09f9880223a2261737472616c222c22ee8080223a22626d70227d",
+      "frame_hex": "68663a6672616d653a7631000010646174617365742e6d65746164617461000000297b2261223a226173636969222c22f09f9880223a2261737472616c222c22ee8080223a22626d70227d",
+      "digest": "1c338789d76d20ca42e5c0537cf95c19bf2b0334f31fec64421eb6b3512780a9a38c0bb86e999902385a60c3bd33db9ba29ac84103490393aa5f82b36c64b702"
+    },
+    {
+      "id": "json-bigint",
+      "domain": "dataset.metadata",
+      "material": "json",
+      "value": {
+        "id": {
+          "$hf_bigint": "9007199254740993"
+        }
+      },
+      "payload_hex": "7b226964223a2239303037313939323534373430393933227d",
+      "frame_hex": "68663a6672616d653a7631000010646174617365742e6d65746164617461000000197b226964223a2239303037313939323534373430393933227d",
+      "digest": "082f9ffb14933862ad917a406a1a9f4a7a500368052e01e9bb9aadd3f98609ebf9cb9202fc8a56ba22149e7a0a1df532893e772476c73f7c06b18ebbd6d3afa6"
+    },
+    {
+      "id": "json-surrogate",
+      "domain": "dataset.metadata",
+      "material": "json",
+      "value": {
+        "s": "x\ud800y"
+      },
+      "payload_hex": "7b2273223a22785c756438303079227d",
+      "frame_hex": "68663a6672616d653a7631000010646174617365742e6d65746164617461000000107b2273223a22785c756438303079227d",
+      "digest": "6615d0f4309e3148964cf60caa1175530aa6ae532022fb0a627fdd6fa643ef60851ee7703efefeaa7d7c0b9bd2b3ac9a287c91cc2b619ff82f384d22dc78588e"
+    }
+  ]
+}

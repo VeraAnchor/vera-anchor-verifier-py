@@ -1,0 +1,82 @@
+{
+  "schema": "vera-anchor-dataset-v1-conformance@1",
+  "reference_commit": "53937fb2177c7340ab0b8e432aea5241fe76231b",
+  "bundle": {
+    "bundle_version": "v1",
+    "hash_contract": {
+      "contract_id": "hf-contract-v1",
+      "frame": "hf:frame:v1",
+      "canonical_json": "hf:canonical-json:v1",
+      "algorithm": "sha3-512",
+      "encoding": "hex_lower"
+    },
+    "dataset_identity": {
+      "dataset_key": "dataset.alpha",
+      "version_label": "v1",
+      "program": "sage"
+    },
+    "rules": {
+      "path_normalization": "posix_rel_no_dotdot",
+      "follow_symlinks": false,
+      "redact_paths": false,
+      "ordering": "path_rel_ascii_asc",
+      "merkle_rule": "dup_last_on_odd"
+    },
+    "files": [
+      {
+        "path_rel": "a.txt",
+        "bytes": 3,
+        "sha3_512": "b751850b1a57168a5693cd924b6b096e08f621827444f70d884f5d0240d2712e10e116e9192af3c91a7ec57647e3934057340b4cf408d5a56592f8274eec53f0",
+        "leaf_hash": "ad96921a7d031ba445b2fc7ca1d567fb3bcf18f777864d6b6742e46aefafbdf501f1d6001f3f7185365b126816e39ca7c3efedca9ff88cb9abc6c9589eaa6a2a"
+      },
+      {
+        "path_rel": "b.txt",
+        "bytes": 4,
+        "sha3_512": "ceca4daf960c2bbfb4a9edaca9b8137a801b65bae377e0f534ef9141c8684c0fedc1768d1afde9766572846c42b935f61177eaf97d355fa8dc2bca3fecfa754d",
+        "leaf_hash": "fc572ec4e26541ae959c139d5ab033b0e4d9dcdee6da1c9a21cec8de46f2302e79fcc6349667b2434fcd3fb04a50524bef8d8e65fd8407ad04ef6d6b3f5de007"
+      }
+    ],
+    "merkle": {
+      "leaf_count": 2,
+      "root": "97f040a5f9a800f48565378d02dedc0e7e0c94e8553b2d6609b4009a5ce7c19c42591f09ad540f6665d12a4d461e129070d6108bab85cca9349f26d4a374184b"
+    },
+    "summary": {
+      "file_count": 2,
+      "total_bytes": 7
+    }
+  },
+  "computed": {
+    "bundle_digest": "4fe384eb45443074d3e7e8bc6594def4f8bd91573843913c25d29e3f90054b0b7a630baecb1b2dc2750277cfbb214a0241c6f6c4a6638d78933b0e98e56eaa65",
+    "dataset_fingerprint": "7b1bb0d059ac74dfc4952c842267bc91dd4eeb4f9079803122c71e86cfb5da883c663ca6a8733f0470b8216fe07c8a911a3afe61544fa6399485d05963dac8b1",
+    "merkle_root": "97f040a5f9a800f48565378d02dedc0e7e0c94e8553b2d6609b4009a5ce7c19c42591f09ad540f6665d12a4d461e129070d6108bab85cca9349f26d4a374184b",
+    "idempotency_key": "97a848fc0ed8f4b2411516dad6b12ce7af0ea59a828abaf3362c9c67db4b3661e5be8708471abafa0515d2a5c83f3842af6137be214aed51d1bcfe40877e4d2e",
+    "file_count": 2,
+    "total_bytes": 7
+  },
+  "receipt": {
+    "v": "v1",
+    "kind": "dataset_anchor_receipt",
+    "mode": "hash_only",
+    "dataset_identity": {
+      "dataset_key": "dataset.alpha",
+      "version_label": "v1",
+      "program": "sage"
+    },
+    "rules": {
+      "path_normalization": "posix_rel_no_dotdot",
+      "follow_symlinks": false,
+      "redact_paths": false,
+      "ordering": "path_rel_ascii_asc",
+      "merkle_rule": "dup_last_on_odd"
+    },
+    "evidence": {
+      "dataset_fingerprint": "7b1bb0d059ac74dfc4952c842267bc91dd4eeb4f9079803122c71e86cfb5da883c663ca6a8733f0470b8216fe07c8a911a3afe61544fa6399485d05963dac8b1",
+      "bundle_digest": "4fe384eb45443074d3e7e8bc6594def4f8bd91573843913c25d29e3f90054b0b7a630baecb1b2dc2750277cfbb214a0241c6f6c4a6638d78933b0e98e56eaa65",
+      "merkle_root": "97f040a5f9a800f48565378d02dedc0e7e0c94e8553b2d6609b4009a5ce7c19c42591f09ad540f6665d12a4d461e129070d6108bab85cca9349f26d4a374184b",
+      "idempotency_key": "97a848fc0ed8f4b2411516dad6b12ce7af0ea59a828abaf3362c9c67db4b3661e5be8708471abafa0515d2a5c83f3842af6137be214aed51d1bcfe40877e4d2e",
+      "file_count": 2,
+      "total_bytes": 7
+    },
+    "receipt_id": "f0651c1b618c7f3af3bc245f23825857b8a611ef089829751231bec5452c5f4e833471a1bcb59225c930a4f1fe91e56fc9df459d63dd0b9d3128a2d12cec4069"
+  }
+}

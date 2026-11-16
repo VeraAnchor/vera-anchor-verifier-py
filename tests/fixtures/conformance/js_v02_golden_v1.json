@@ -1,0 +1,57 @@
+{
+  "schema": "va.js-v0.2-golden-parity.v1",
+  "js_version": "0.2.0",
+  "dataset": {
+    "fixture": "dataset_v1.json",
+    "reference_commit": "53937fb2177c7340ab0b8e432aea5241fe76231b"
+  },
+  "canonical_json": {
+    "value": {
+      "a": 1e20,
+      "b": 1e21,
+      "c": 1e-6,
+      "d": 1e-7,
+      "e": -0.0,
+      "😀": 1,
+      "": 2,
+      "array": [
+        3,
+        2,
+        1
+      ]
+    },
+    "expected": "{\"a\":100000000000000000000,\"array\":[3,2,1],\"b\":1e+21,\"c\":0.000001,\"d\":1e-7,\"e\":0,\"😀\":1,\"\":2}"
+  },
+  "ingest": {
+    "fixture": "integration/fixtures/conformance/ingest/mainnet/2026-10-31",
+    "expected": {
+      "fingerprint": "7b3eb268ac387fa604335f32834349b81c61468e740230025ee652ad65e4280b555f47f0d2db74556d95d48bbe26da16c7d8751b0e0f8b373ee33f170c5bb0f5",
+      "bundle_digest": "a80892b2f77853074c8534146c95429a72ff96746e91a1daba73af5ee706f04bc7a4d93c27badeaf034bec1ccf19562dff0e1e10ee492cc8090c855d7649f542",
+      "merkle_root": "af689d911487c83afaa36cc16523790275b4664c94193d1e345e6fc68a57580704d278998a89dcfade2b93f3aa4f0f5b884f4e3380395e353b561823df17542c"
+    }
+  },
+  "execution": {
+    "fixture": "integration/fixtures/conformance/sage/mainnet/2026-10-21",
+    "job_id": "4e4f624d-25b6-577f-93c6-075292e722d6",
+    "result_id": "b7e96d64-c2b0-5739-90e5-36cfeecc95bb",
+    "required_pass": [
+      "binding.digest_recomputed",
+      "acceptance.digest_recomputed",
+      "result_evidence.digest_recomputed",
+      "intent.subject",
+      "intent.result"
+    ]
+  },
+  "core": {
+    "expected_digest": "d32f4b858f4c765666889e7312985223d9db17b3ce3d4ad517aa428069d93e6acc7c595ae22dc89d60e6b525eeb678557bd674944a98bf56abb3b044d87dc6fb"
+  },
+  "policy": {
+    "saved_report": {
+      "decision": "review",
+      "authority": "unauthenticated_report",
+      "reason_codes": [
+        "POLICY_REPORT_NOT_AUTHENTICATED"
+      ]
+    }
+  }
+}
