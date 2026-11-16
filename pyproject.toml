@@ -36,6 +36,14 @@ Issues = "https://github.com/VeraAnchor/vera-anchor-verifier-py/issues"
 [project.scripts]
 vera-anchor = "vera_anchor_verifier.cli:main"
 
+[project.optional-dependencies]
+dev = [
+    "build",
+    "mypy",
+    "pytest",
+    "ruff",
+]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/vera_anchor_verifier"]
 
